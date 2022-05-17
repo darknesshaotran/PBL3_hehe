@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,18 @@ namespace pbl3_f
         public QL()
         {
             InitializeComponent();
-            
+            string s = @"Data Source=DESKTOP-SRQRFL4\SQLEXPRESS;Initial Catalog=coffe;Integrated Security=True";
+            SqlConnection cnn = new SqlConnection(s);
+            string querry = "select * from hehe";
+
+            SqlCommand cmd = new SqlCommand(querry, cnn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            cnn.Open();
+            da.Fill(dt);
+            cnn.Close();
+            dataGridView1.DataSource = dt;
+
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
@@ -156,6 +168,19 @@ namespace pbl3_f
         {
             Form f = new Profile();
             f.ShowDialog();
+        }
+
+        private void bunifuThinButton212_Click(object sender, EventArgs e)
+        {
+
+            
+
+        }
+
+        private void bunifuThinButton210_Click(object sender, EventArgs e)
+        {
+
+           
         }
     }
 }

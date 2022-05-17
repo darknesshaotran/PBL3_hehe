@@ -33,8 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.doubleBitmapControl1 = new BunifuAnimatorNS.DoubleBitmapControl();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.tabRevenue = new System.Windows.Forms.TabPage();
@@ -71,7 +69,6 @@
             this.bunifuThinButton214 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton211 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton210 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuCustomDataGrid2 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.tabMenu = new System.Windows.Forms.TabPage();
             this.bunifuThinButton29 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -112,6 +109,7 @@
             this.waiter_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Item_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Home_btn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabRevenue.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton8)).BeginInit();
@@ -119,7 +117,6 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton7)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid2)).BeginInit();
             this.tabMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton6)).BeginInit();
@@ -135,6 +132,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // doubleBitmapControl1
@@ -242,7 +240,7 @@
             this.bunifuCustomDataGrid3.Name = "bunifuCustomDataGrid3";
             this.bunifuCustomDataGrid3.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.bunifuCustomDataGrid3.RowHeadersWidth = 51;
-            this.bunifuCustomDataGrid3.Size = new System.Drawing.Size(1091, 411);
+            this.bunifuCustomDataGrid3.Size = new System.Drawing.Size(1183, 411);
             this.bunifuCustomDataGrid3.TabIndex = 6;
             // 
             // label14
@@ -354,7 +352,7 @@
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.bunifuThinButton213);
             this.panel3.Controls.Add(this.bunifuTextbox2);
-            this.panel3.Location = new System.Drawing.Point(616, 0);
+            this.panel3.Location = new System.Drawing.Point(730, 4);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(496, 811);
@@ -615,15 +613,15 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.bunifuThinButton212);
             this.panel2.Controls.Add(this.bunifuThinButton214);
             this.panel2.Controls.Add(this.bunifuThinButton211);
             this.panel2.Controls.Add(this.bunifuThinButton210);
-            this.panel2.Controls.Add(this.bunifuCustomDataGrid2);
             this.panel2.Location = new System.Drawing.Point(4, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(615, 800);
+            this.panel2.Size = new System.Drawing.Size(728, 800);
             this.panel2.TabIndex = 0;
             // 
             // bunifuThinButton212
@@ -644,12 +642,13 @@
             this.bunifuThinButton212.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton212.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton212.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton212.Location = new System.Drawing.Point(439, 562);
+            this.bunifuThinButton212.Location = new System.Drawing.Point(544, 562);
             this.bunifuThinButton212.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.bunifuThinButton212.Name = "bunifuThinButton212";
             this.bunifuThinButton212.Size = new System.Drawing.Size(131, 52);
             this.bunifuThinButton212.TabIndex = 6;
             this.bunifuThinButton212.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton212.Click += new System.EventHandler(this.bunifuThinButton212_Click);
             // 
             // bunifuThinButton214
             // 
@@ -669,7 +668,7 @@
             this.bunifuThinButton214.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton214.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton214.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton214.Location = new System.Drawing.Point(295, 562);
+            this.bunifuThinButton214.Location = new System.Drawing.Point(366, 562);
             this.bunifuThinButton214.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.bunifuThinButton214.Name = "bunifuThinButton214";
             this.bunifuThinButton214.Size = new System.Drawing.Size(131, 52);
@@ -694,7 +693,7 @@
             this.bunifuThinButton211.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton211.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton211.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton211.Location = new System.Drawing.Point(151, 562);
+            this.bunifuThinButton211.Location = new System.Drawing.Point(184, 562);
             this.bunifuThinButton211.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.bunifuThinButton211.Name = "bunifuThinButton211";
             this.bunifuThinButton211.Size = new System.Drawing.Size(131, 52);
@@ -725,34 +724,7 @@
             this.bunifuThinButton210.Size = new System.Drawing.Size(131, 52);
             this.bunifuThinButton210.TabIndex = 1;
             this.bunifuThinButton210.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuCustomDataGrid2
-            // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomDataGrid2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.bunifuCustomDataGrid2.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.bunifuCustomDataGrid2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bunifuCustomDataGrid2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.bunifuCustomDataGrid2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bunifuCustomDataGrid2.DoubleBuffered = true;
-            this.bunifuCustomDataGrid2.EnableHeadersVisualStyles = false;
-            this.bunifuCustomDataGrid2.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomDataGrid2.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomDataGrid2.Location = new System.Drawing.Point(-1, 5);
-            this.bunifuCustomDataGrid2.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuCustomDataGrid2.Name = "bunifuCustomDataGrid2";
-            this.bunifuCustomDataGrid2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.bunifuCustomDataGrid2.RowHeadersWidth = 51;
-            this.bunifuCustomDataGrid2.Size = new System.Drawing.Size(615, 513);
-            this.bunifuCustomDataGrid2.TabIndex = 0;
+            this.bunifuThinButton210.Click += new System.EventHandler(this.bunifuThinButton210_Click);
             // 
             // tabMenu
             // 
@@ -791,7 +763,7 @@
             this.bunifuThinButton29.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton29.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton29.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton29.Location = new System.Drawing.Point(140, 670);
+            this.bunifuThinButton29.Location = new System.Drawing.Point(212, 669);
             this.bunifuThinButton29.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton29.Name = "bunifuThinButton29";
             this.bunifuThinButton29.Size = new System.Drawing.Size(283, 63);
@@ -815,10 +787,10 @@
             this.panel1.Controls.Add(this.bunifuTextbox1);
             this.panel1.Controls.Add(this.bunifuImageButton6);
             this.panel1.Controls.Add(this.bunifuCustomLabel1);
-            this.panel1.Location = new System.Drawing.Point(605, -11);
+            this.panel1.Location = new System.Drawing.Point(731, -20);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(605, 1039);
+            this.panel1.Size = new System.Drawing.Size(479, 1048);
             this.panel1.TabIndex = 5;
             // 
             // label5
@@ -1005,19 +977,19 @@
             // 
             // bunifuCustomDataGrid1
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.bunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.bunifuCustomDataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bunifuCustomDataGrid1.DoubleBuffered = true;
             this.bunifuCustomDataGrid1.EnableHeadersVisualStyles = false;
@@ -1028,7 +1000,7 @@
             this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
             this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.bunifuCustomDataGrid1.RowHeadersWidth = 51;
-            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(615, 585);
+            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(739, 585);
             this.bunifuCustomDataGrid1.TabIndex = 0;
             // 
             // bunifuThinButton27
@@ -1049,7 +1021,7 @@
             this.bunifuThinButton27.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton27.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton27.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton27.Location = new System.Drawing.Point(395, 609);
+            this.bunifuThinButton27.Location = new System.Drawing.Point(554, 609);
             this.bunifuThinButton27.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton27.Name = "bunifuThinButton27";
             this.bunifuThinButton27.Size = new System.Drawing.Size(104, 50);
@@ -1074,7 +1046,7 @@
             this.bunifuThinButton26.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton26.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton26.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton26.Location = new System.Drawing.Point(281, 609);
+            this.bunifuThinButton26.Location = new System.Drawing.Point(385, 609);
             this.bunifuThinButton26.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton26.Name = "bunifuThinButton26";
             this.bunifuThinButton26.Size = new System.Drawing.Size(104, 50);
@@ -1099,7 +1071,7 @@
             this.bunifuThinButton25.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton25.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton25.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton25.Location = new System.Drawing.Point(167, 609);
+            this.bunifuThinButton25.Location = new System.Drawing.Point(212, 609);
             this.bunifuThinButton25.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton25.Name = "bunifuThinButton25";
             this.bunifuThinButton25.Size = new System.Drawing.Size(104, 50);
@@ -1125,7 +1097,7 @@
             this.bunifuThinButton24.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton24.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton24.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton24.Location = new System.Drawing.Point(53, 609);
+            this.bunifuThinButton24.Location = new System.Drawing.Point(44, 609);
             this.bunifuThinButton24.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton24.Name = "bunifuThinButton24";
             this.bunifuThinButton24.Size = new System.Drawing.Size(104, 50);
@@ -1167,7 +1139,7 @@
             this.bunifuThinButton23.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton23.Location = new System.Drawing.Point(360, 535);
+            this.bunifuThinButton23.Location = new System.Drawing.Point(428, 530);
             this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.bunifuThinButton23.Name = "bunifuThinButton23";
             this.bunifuThinButton23.Size = new System.Drawing.Size(327, 70);
@@ -1193,7 +1165,7 @@
             this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.Location = new System.Drawing.Point(360, 442);
+            this.bunifuThinButton22.Location = new System.Drawing.Point(428, 442);
             this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.bunifuThinButton22.Name = "bunifuThinButton22";
             this.bunifuThinButton22.Size = new System.Drawing.Size(327, 70);
@@ -1220,7 +1192,7 @@
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(360, 359);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(428, 351);
             this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
             this.bunifuThinButton21.Size = new System.Drawing.Size(327, 70);
@@ -1231,7 +1203,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::pbl3_f.Properties.Resources.A;
-            this.pictureBox2.Location = new System.Drawing.Point(149, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(227, 4);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(715, 326);
@@ -1598,11 +1570,21 @@
             this.Home_btn.MouseClick += new System.Windows.Forms.MouseEventHandler(this.bunifuGradientPanel1_MouseClick);
             this.Home_btn.MouseEnter += new System.EventHandler(this.bunifuGradientPanel1_MouseEnter);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(-2, 2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(729, 538);
+            this.dataGridView1.TabIndex = 7;
+            // 
             // QL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1385, 793);
+            this.ClientSize = new System.Drawing.Size(1485, 793);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Controls.Add(this.doubleBitmapControl1);
@@ -1619,7 +1601,6 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton7)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid2)).EndInit();
             this.tabMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -1637,6 +1618,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1695,7 +1677,6 @@
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton214;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton211;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton210;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid2;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox7;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox6;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox5;
@@ -1720,5 +1701,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton9;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
